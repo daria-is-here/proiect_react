@@ -2,7 +2,7 @@ export const baseUrl = 'http://163.172.177.98:8081';
 
 
 export const fetchUserData = async (token: string) => {
-  console.log(token); // Verificăm tokenul primit
+  console.log(token); 
   const result = await fetch(`${baseUrl}/user/details/me`, {
       method: 'GET',
       headers: {
@@ -49,7 +49,7 @@ export const login = async (email: string, password: string): Promise<{ token: s
 };
 
 export const register = async (email: string, password: string): Promise<{ token: string, userName: string }> => {
-  console.log('Sending register request:', { email, password });///maria scoate toate console log urile 
+  console.log('Sending register request:', { email, password }); 
 
   const result = await fetch(`${baseUrl}/auth/register`, {
     method: 'POST',
